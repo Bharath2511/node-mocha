@@ -13,6 +13,15 @@ it('should add two numbers',()=> {
 //   }
 })
 
+it('should add two numbers',(/*to tell async*/done )=> {
+    utils.asyncAdd(4,3,(sum)=>{
+        expect(sum).toBe(7).toBeA('number')
+        //after assertions
+        done()
+    })
+})
+
+
 it('should return square of a number',()=> {
     var res = utils.square(6)
     expect(res).toBe(36).toBeA('number')
