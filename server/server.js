@@ -9,6 +9,13 @@ app.get('/',(req,res)=>{
     })
 })
 
+app.get('/users',(req,res)=>{
+    res.status(200).send([
+        {name : "bob",age : 5},
+        {name:"kevin",age : 7}
+    ]) 
+})
+
 app.listen(3001,()=>{
     console.log(3001)
 })
