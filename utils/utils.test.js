@@ -17,3 +17,9 @@ it('should return square of a number',()=> {
     var res = utils.square(6)
     expect(res).toBe(36).toBeA('number')
 })
+
+it('should expect err',() => {
+  //expect(12).toNotBe(11)
+ // expect({name : "Bharath"}).toEqual({name :"Bharath"})//toNotEqual
+ expect([2,3,4]).toInclude(4)//toExclude
+})
