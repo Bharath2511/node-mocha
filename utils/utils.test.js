@@ -21,5 +21,22 @@ it('should return square of a number',()=> {
 it('should expect err',() => {
   //expect(12).toNotBe(11)
  // expect({name : "Bharath"}).toEqual({name :"Bharath"})//toNotEqual
- expect([2,3,4]).toInclude(4)//toExclude
+ //expect([2,3,4]).toInclude(4)//toExclude
+expect({
+    name : "Bharath",
+    age : 22,
+    place : "Hyderabad"
+}).toInclude({
+    age:22
+})
+})
+
+it('should set firstName and lastName',()=>{
+    var user = {location:"Hyderabad",age:22}
+    var res = utils.setName(user,"Bharath Chandra")
+
+    expect(res).toInclude({
+        firstName : "Bharath",
+        lastName : "Chandra"
+    })
 })
