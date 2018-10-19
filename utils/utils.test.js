@@ -21,6 +21,13 @@ it('should add two numbers',(/*to tell async*/done )=> {
     })
 })
 
+it('should return a square',(done)=>{
+    utils.asyncSquare(6,(square)=>{
+        expect(square).toBe(36).toBeA('number')
+        done()
+    })
+})
+
 
 it('should return square of a number',()=> {
     var res = utils.square(6)

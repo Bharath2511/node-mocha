@@ -6,6 +6,12 @@ module.exports.asyncAdd = (a,b,callback) => {
   },1000)
 }
 
+module.exports.asyncSquare = (a,callback) => {
+  setTimeout(()=>{
+    callback(a*a)
+  },1000)
+}
+
 module.exports.square = (x) => x*x
 module.exports.setName=(user,fullName) => {
   var names = fullName.split(" ")
